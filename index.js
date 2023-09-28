@@ -10,7 +10,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const username = process.env.USERNAME;
 const password = process.env.PASSWORD;
-const perPage = 20;
+const perPage = 10;
 const apiUrl = process.env.API_URL;
 
 app.get("/get-posts", async (req, res) => {
