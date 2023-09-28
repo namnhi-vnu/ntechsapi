@@ -8,10 +8,10 @@ app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
-const username = "nt.vanha@1997";
-const password = "Ntechs@2022!";
-const perPage = 20; // Số bài viết trên mỗi trang
-const apiUrl = "https://ntechs.vn/wp-json/wp/v2/posts"; // URL API cơ bản
+const username = process.env.USERNAME;
+const password = process.env.PASSWORD;
+const perPage = 20;
+const apiUrl = process.env.API_URL;
 
 app.get("/get-posts", async (req, res) => {
     // Lấy tham số "page" từ query string (mặc định là trang 1 nếu không có)
